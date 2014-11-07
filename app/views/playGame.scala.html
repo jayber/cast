@@ -1,0 +1,56 @@
+@(myName: String, opponentName: String)
+
+<div>
+    <div id="winner">&nbsp</div>
+    <canvas id="opponentScore" class="scoreBox"></canvas>
+    <div class="clear name">@opponentName</div>
+    <div id="opponent" class="panel">
+        <div class="spell">&nbsp</div>
+        <div class="spell">&nbsp</div>
+        <div class="spell">&nbsp</div>
+        <div class="spell">&nbsp</div>
+    </div>
+    <div id="player" class="panel">
+        <div class="spell">&nbsp</div>
+        <div class="spell">&nbsp</div>
+        <div class="spell">&nbsp</div>
+        <div class="spell">&nbsp</div>
+    </div>
+    <div class="clear name">You</div>
+</div>
+
+<div class="clear" id="castingArea">&nbsp</div> <button id="buttonCast" disabled>Cast!</button>
+
+<div class="buttonPanel clear">
+    <button id="buttonA" disabled >A</button>
+    <button id="buttonB" disabled>B</button><br>
+    <button id="buttonC" disabled>C</button>
+    <button id="buttonD" disabled>D</button>
+</div>
+
+<canvas id="playerScore" class="scoreBox clear"></canvas>
+
+<div id="messages" class="clear">Waiting...</div>
+
+<script src="@routes.Assets.at("javascripts/main.js")" type="text/javascript"></script>
+
+<script>
+playerNames = {
+"player" : "@myName",
+"opponent" : "@opponentName"
+} ;
+
+playerRoles = {
+"@myName":"player",
+"@opponentName":"opponent"
+} ;
+
+endScore = @Tweakables.END_SCORE;
+maxSpellSize = @Tweakables.MAX_SPELL_SIZE;
+
+$ ( document ).ready ( function ( ) {
+ws.onopen = function ( evt ) {
+ready ( )
+}
+} ) ;
+</script>

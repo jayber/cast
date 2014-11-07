@@ -1,0 +1,65 @@
+body {
+    width: 450px;
+    margin: 20px;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+.buttonPanel {
+    float: right;
+}
+
+#player {
+    background-color: #eeeeff;
+}
+
+#opponent {
+    background-color: #ffeeee;
+}
+
+#castingArea {
+    float: left;
+}
+
+#buttonCast {
+    float: right;
+}
+
+.name {
+    text-align: center;
+    font-weight: bold;
+}
+
+.clear {
+    clear: both;
+}
+
+.buttonPanel button {
+    width: 80px;
+    height: 80px;
+    margin: 3px;
+}
+
+.score, .scoreBox {
+    height: 19px;
+    width: 440px;
+}
+
+.score {
+    background-color: #ff6633;
+    float: left;
+}
+
+.scoreBox {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+    float: left;
+    padding: 2px;
+}
+
+#winner {
+    font-size: 20pt;
+}
